@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head>
+   <head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>Register Page  - Bootsnipp.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+	</style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	
+	
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+
+		<!-- Website CSS style -->
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+		<!-- Website Font style -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		
+		<!-- Google Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+   </head>
+   <body>
+		
+      <h3>FeedBack (<a href = "{{ url_for('feedback') }}">Give FeedBack
+         </a>)</h3>
+      
+      <table>
+         <thead>
+            <tr>
+               <th>Rate the meet</th>
+               <th>Would you like to be invited for any future DBIT alumni meets?</th>
+               <th>Do you feel proud to be associated with DBIT as an alumni?</th>
+			   <th>Is the education imparted by DBIT useful and revelant in your present job?</th>
+               <th>Have you obtained sufficient technical knowledge (both in theory and practical) at DBIT?</th>
+               <th>Institute organizes various kinds of activities for overall development of studemts?</th>
+			   <th>Institute handles students grievance properly?</th>
+               <th>Do you like to join the institute alumini association</th>
+               <th>Is institute providing good hospitality as alumini after passing out?</th>
+			   <th>Is the education imparted by DBIT useful and revelant in your present job?</th>
+               <th>Do you receive regular updates from the institute through Mails/Calls/SMS etc?</th>
+            </tr>
+         </thead>
+         
+         <tbody>
+            
+               <tr>
+                  <td>{{ feedback.q1 }}</td>
+                  <td>{{ feedback.q2 }}</td>
+                  <td>{{ feedback.q3 }}</td>
+				  <td>{{ feedback.q4 }}</td>
+                  <td>{{ feedback.q5 }}</td>
+                  <td>{{ feedback.q6 }}</td>
+				  <td>{{ feedback.q7 }}</td>
+                  <td>{{ feedback.q8 }}</td>
+                  <td>{{ feedback.q9 }}</td>
+				  <td>{{ feedback.q10 }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+      
+   </body>
+</html>
