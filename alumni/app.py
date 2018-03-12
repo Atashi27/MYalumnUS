@@ -169,7 +169,7 @@ def feedback1():
          db.session.commit()
          flash('Record was successfully added')
          return render_template('home.html')
-   return render_template('feedback1.html')
+   return render_template('feedback1.html')1
 
 
    

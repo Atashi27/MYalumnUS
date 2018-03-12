@@ -2,108 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
     <title>Feedback</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="static/images/alumnilogo.png" />	
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <style type="text/css">
-        /*
-/* Created by Filipe Pina
- * Specific styles of signin, register, component
- */
-/*
- * General styles
- */
 
-body, html{
-     height: 100%;
- 	background-repeat: no-repeat;
- 	background-color: #d3d3d3;
- 	font-family: 'Oxygen', sans-serif;
-}
+		body, html{
+		     height: 100%;
+		 	background-repeat: no-repeat;
+		 	background-color: #d3d3d3;
+		 	font-family: 'Oxygen', sans-serif;
+		}
 
-.main{
- 	margin-top: 70px;
-}
+		.main{
+		 	margin-top: 70px;
+		}
 
-h1.title { 
-	font-size: 50px;
-	font-family: 'Passion One', cursive; 
-	font-weight: 400; 
-}
+		h1.title { 
+			font-size: 50px;
+			font-family: 'Passion One', cursive; 
+			font-weight: 400; 
+		}
 
-hr{
-	width: 10%;
-	color: #fff;
-}
+		hr{
+			width: 10%;
+			color: #fff;
+		}
 
-.form-group{
-	margin-bottom: 15px;
-}
+		.form-group{
+			margin-bottom: 15px;
+		}
 
-label{
-	margin-bottom: 15px;
-}
+		label{
+			margin-bottom: 15px;
+		}
 
-input,
-input::-webkit-input-placeholder {
-    font-size: 11px;
-    padding-top: 3px;
-}
+		input,
+		input::-webkit-input-placeholder {
+		    font-size: 11px;
+		    padding-top: 3px;
+		}
 
-.main-login{
- 	background-color: #fff;
-    /* shadows and rounded borders */
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+		.main-login{
+		 	background-color: #fff;
+		    /* shadows and rounded borders */
+		    -moz-border-radius: 2px;
+		    -webkit-border-radius: 2px;
+		    border-radius: 2px;
+		    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+		    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+		    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 
-}
+		}
 
-.main-center{
- 	margin-top: 30px;
- 	margin: 0 auto;
- 	max-width: 620px;
-    padding: 40px 40px;
+		.main-center{
+		 	margin-top: 30px;
+		 	margin: 0 auto;
+		 	max-width: 620px;
+		    padding: 40px 40px;
 
-}
+		}
 
-.login-button{
-	margin-top: 5px;
-}
+		.login-button{
+			margin-top: 5px;
+		}
 
-.login-register{
-	font-size: 11px;
-	text-align: center;
-}
+		.login-register{
+			font-size: 11px;
+			text-align: center;
+		}
 
     </style>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-<!DOCTYPE html>
-<html lang="en">
-    <head> 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-
-		<!-- Website CSS style -->
-		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-
-		<!-- Website Font style -->
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		
-		<!-- Google Fonts -->
-		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-
-		<title>Admin</title>
-	</head>
-	<body>
 		<div class="container">
 			<div class="row main">
 				<div class="panel-heading">
@@ -115,49 +92,52 @@ input::-webkit-input-placeholder {
 				<div class="main-login main-center">
 					<form class="form-horizontal" method="post" action="#">
 						<div class="form-group">
-							<label for="name" class="cols-sm-2 control-label">1.Rate the meet</label>
+							<label for="name" class="cols-sm-2 control-label">1. Rate the meet</label>
 							<div class="cols-sm-10">
 								<div class="input-group">		
-									 <input type ="radio" name="q1" value="good"> Good <input type ="radio" name ="q1" value="average">Average <input type ="radio" name ="q1" value="poor">Poor</br>
+									 <input type ="radio" name="q1" value="good"> Good 
+									 <input type ="radio" name ="q1" value="average">Average 
+									 <input type ="radio" name ="q1" value="poor">Poor</br>
 								</div>
 							</div>
 						</div>
 						
 						<div class="form-group">
-							<label for="name" class="cols-sm-2 control-label">2.Would you like to be invited for any future DBIT alumni meets?</label>
+							<label for="name" class="cols-sm-2 control-label">2. Would you like to be invited for any future DBIT alumni meets?</label>
 							<div class="cols-sm-10">
 								<div class="input-group">	
-									<input type ="radio" name="q2" value="Yes"> Yes <input type ="radio" name="q2" value="No">No
+									<input type ="radio" name="q2" value="Yes"> Yes 
+									<input type ="radio" name="q2" value="No">No
 								</div>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="email" class="cols-sm-2 control-label">3.Do you feel proud to be associated with DBIT as an alumni?</label>
+							<label for="email" class="cols-sm-2 control-label">3. Do you feel proud to be associated with DBIT as an alumni?</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
-									
-									<input type ="radio" name="q3" value="Yes"> Yes <input type ="radio" name="q3" value="No">No
+									<input type ="radio" name="q3" value="Yes"> Yes 
+									<input type ="radio" name="q3" value="No">No
 								</div>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="username" class="cols-sm-2 control-label">4.Is the education imparted by DBIT useful and revelant in your present job?</label>
+							<label for="username" class="cols-sm-2 control-label">4. Is the education imparted by DBIT useful and revelant in your present job?</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<input type ="radio" name="q4" value="Yes"> Yes <input type ="radio" name="q4" value="No">No
-
+									<input type ="radio" name="q4" value="Yes"> Yes 
+									<input type ="radio" name="q4" value="No">No
 								</div>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="password" class="cols-sm-2 control-label">5.Have you obtained sufficient technical knowledge (both in theory and practical) at DBIT?</label>
+							<label for="password" class="cols-sm-2 control-label">5. Have you obtained sufficient technical knowledge (both in theory and practical) at DBIT?</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<input type ="radio" name="q5" value="Yes"> Yes <input type ="radio" name="q5" value="No">No
-
+									<input type ="radio" name="q5" value="Yes"> Yes 
+									<input type ="radio" name="q5" value="No">No
 								</div>
 							</div>
 						</div>
@@ -166,44 +146,44 @@ input::-webkit-input-placeholder {
 							<label for="confirm" class="cols-sm-2 control-label">6. Institute organizes various kinds of activities for overall development of studemts?</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<input type ="radio" name="q6" value="Yes"> Yes <input type ="radio" name="q6" value="No">No
-
+									<input type ="radio" name="q6" value="Yes"> Yes 
+									<input type ="radio" name="q6" value="No">No
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="confirm" class="cols-sm-2 control-label">7.Institute handles students grievance properly? </label>
+							<label for="confirm" class="cols-sm-2 control-label">7. Institute handles students grievance properly? </label>
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<input type ="radio" name="q7" value="Yes"> Yes <input type ="radio" name="q7" value="No">No
-
+									<input type ="radio" name="q7" value="Yes"> Yes 
+									<input type ="radio" name="q7" value="No">No
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="confirm" class="cols-sm-2 control-label">8.Do you like to join the institute alumini association</label>
+							<label for="confirm" class="cols-sm-2 control-label">8. Do you like to join the institute alumini association</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<input type ="radio" name="q8" value="Yes"> Yes <input type = "radio" name="q8" value="No">No
-
+									<input type ="radio" name="q8" value="Yes"> Yes 
+									<input type = "radio" name="q8" value="No">No
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="confirm" class="cols-sm-2 control-label">9.Is institute providing good hospitality as alumini after passing out?</label>
+							<label for="confirm" class="cols-sm-2 control-label">9. Is institute providing good hospitality as alumini after passing out?</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<input type = "radio" name="q9" value="Yes"> Yes <input type = "radio" name="q9" value="No">No
-
+									<input type = "radio" name="q9" value="Yes"> Yes 
+									<input type = "radio" name="q9" value="No">No
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="confirm" class="cols-sm-2 control-label">10.Do you receive regular updates from the institute through Mails/Calls/SMS etc?</label>
+							<label for="confirm" class="cols-sm-2 control-label">10. Do you receive regular updates from the institute through Mails/Calls/SMS etc?</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<input type ="radio" name="q10" value="Yes">Yes<input type ="radio" name="q10" value="No">No
-
+									<input type ="radio" name="q10" value="Yes">Yes
+									<input type ="radio" name="q10" value="No">No
 								</div>
 							</div>
 						</div>
@@ -216,12 +196,5 @@ input::-webkit-input-placeholder {
 				</div>
 			</div>
 		</div>
-
-		<script type="text/javascript" src="assets/js/bootstrap.js"></script>
-	</body>
-</html>
-<script type="text/javascript">
-
-</script>
 </body>
 </html>

@@ -2,17 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Send Email</title>
+    <title>Register Page  - Bootsnipp.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="static/images/alumnilogo.png" />
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <style type="text/css">
-
         body, html{
              height: 100%;
             background-repeat: no-repeat;
@@ -64,7 +62,7 @@
         .main-center{
             margin-top: 30px;
             margin: 0 auto;
-            max-width: 500px;
+            max-width: 330px;
             padding: 40px 40px;
 
         }
@@ -77,7 +75,6 @@
             font-size: 11px;
             text-align: center;
         }
-
     </style>
 </head>
 <body>
@@ -85,26 +82,39 @@
             <div class="row main">
                 <div class="panel-heading">
                    <div class="panel-title text-center">
-                        <h1 class="title">Send Email</h1>
+                        <h1 class="title">Login Form</h1>
                         <hr />
                     </div>
                 </div> 
                 <div class="main-login main-center">
-                    <form class="form-horizontal" method="post" action="">
-                     <h3>MailId</h3>
-					<textarea rows="5" s="1" cols="54" name="email">
-					</textarea>
-					<h3>Content</h3>
-					<textarea rows="15" s="1" cols="54" name="content">
-					</textarea>
-        				<div class="form-group ">
-                            <button type="submit" value="submit" class="btn btn-primary btn-lg btn-block login-button">Submit</button>
+                    <form class="form-horizontal" method="post" action="#">
+                        
+                        <div class="form-group">
+                            <label for="name" class="cols-sm-2 control-label">Enter Username:</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your username"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password" class="cols-sm-2 control-label">Password</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                    <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+                                </div>
+                            </div>
+                        </div>
+
+ <div class="form-group ">
+                            <button type="button" class="btn btn-primary btn-lg btn-block login-button">Submit</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-
-        <script type="text/javascript" src="assets/js/bootstrap.js"></script>
 </body>
 </html>
