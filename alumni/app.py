@@ -8,7 +8,18 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///alumnUS.sqlite'
 app.config['SECRET_KEY'] = "random string"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-app.config.from_pyfile('config.cfg')
+app.config.update(dict(
+   DEBUG = True,
+   MAIL_SERVER= 'smtp.gmail.com',
+   MAIL_USERNAME='atashi.khatua@gmail.com',
+   MAIL_PASSWORD='******',                #sender password
+   MAIL_PORT =587,
+   MAIL_USE_SSL=False,
+   MAIL_USE_TLS=True,
+   MAIL_MAX_EMAILS=20,
+   MAIL_SUPPRESS_SEND = False,
+   TESTING = False,
+   ))
 
 mail = Mail(app)
 
@@ -59,10 +70,8 @@ def sendreq():
         email = request.form['email']
         users = email.split(",")
         while i < len(users):
-            msg = Message('SUBJECT', sender='admin_email_id', recipients=[users[i]])
-
+            msg = Message(request.form['subject'], sender='atashi.khatua@gmail.com', recipients=[users[i]])
             msg.body = request.form['content']
-
             conn.send(msg)
             i=i+1
 

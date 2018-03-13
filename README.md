@@ -29,8 +29,9 @@ Alumni  has 2 main features:
 
 Step 0. git clone https://github.com/Atashi27/MYalumnUS.git
 
-Step 1. Open config.cfg and app.py to add the authorized email id and password of admin.
-NOTE: Reduce the security of admin email address in mail settings.
+Step 1. Open app.py to add the authorized email id and password of admin in line no 14, 15 and 73. 
+Also allow less secure apps for the admin email address in gmail settings using https://myaccount.google.com/lesssecureapps
+NOTE: If this step is not followed smtplib.SMTPAuthenticationError will be raised
 
 Step 2. Open command prompt and execute following command
 
